@@ -1,0 +1,40 @@
+@mixin menuBg($margin, $background){margin: $margin; background: $background;}
+//border
+@mixin border-radius($radius) {-webkit-border-radius: $radius; -moz-border-radius: $radius; -ms-border-radius: $radius; border-radius: $radius;}
+@mixin border($border){border:$border;}
+@mixin border-top-radius($radius) {-webkit-border-top-right-radius: $radius; -moz-border-top-right-radius: $radius; -ms-border-top-right-radius: $radius; border-top-right-radius: $radius; -webkit-border-top-left-radius: $radius; -moz-border-top-left-radius: $radius; -ms-border-top-left-radius: $radius; border-top-left-radius: $radius;}
+@mixin border-bottom-radius($radius) {-webkit-border-bottom-right-radius: $radius; -moz-border-bottom-right-radius: $radius; -ms-border-bottom-right-radius: $radius; border-bottom-right-radius: $radius; -webkit-border-bottom-left-radius: $radius; -moz-border-bottom-left-radius: $radius; -ms-border-bottom-left-radius: $radius; border-bottom-left-radius: $radius;}
+@mixin borderProp($borderTop, $borderRight,$borderBottom,$borderLeft){border-top:$borderTop; border-right:$borderRight; border-bottom: $borderBottom; border-left:$borderLeft;}
+//margin padding
+@mixin padding($padding){padding-top: $padding; padding-right: $padding; padding-bottom: $padding; padding-left: $padding;}
+@mixin paddingProp($paddingTop,$paddingRight,$paddingBottom,$paddingLeft){padding-top: $paddingTop; padding-right: $paddingRight; padding-bottom: $paddingBottom; padding-left: $paddingLeft;}
+@mixin margin($margin){margin-top: $margin; margin-right: $margin; margin-bottom: $margin; margin-left: $margin;}
+@mixin marginProp($marginTop,$marginRight,$marginBottom,$marginLeft){margin-top: $marginTop; margin-right: $marginRight; margin-bottom: $marginBottom; margin-left: $marginLeft;}
+//width height
+@mixin width-height($width-height){width:$width-height; height: $width-height;}
+@mixin width($width){width:$width;}
+@mixin height($height){height:$height;}
+//Typography
+@mixin fontWeight($fontWeight){font-weight: $fontWeight;}
+@mixin fontStyle($fontStyle){font-style:$fontStyle;}
+//positions
+@mixin position($top,$right,$bottom,$left){top:$top; right: $right; bottom: $bottom; left: $left;}
+//box shadow
+@mixin box-shadow($shadow){-moz-box-shadow: $shadow; -webkit-box-shadow: $shadow ;box-shadow: $shadow;}
+//display
+@mixin display($display){display:$display;}
+//site globaly
+@mixin marginPadding($value){margin:$value; padding: $value;}
+@mixin marginPaddingHeaderMenu($valueMargin,$valuePadding){margin:$valueMargin; padding: $valuePadding;}
+@mixin jumbotron($margin,$padding,$background){margin: $margin; padding:$padding; background:$background;}
+@mixin logo($textShadow,$fontFamily,$fontSize,$color){text-shadow:$textShadow; font-family: $fontFamily; font-size: $fontSize;color: $color;}
+@mixin logoFirstText($fontSize,$lineHeight) {font-size:$fontSize; line-height: $lineHeight;}
+@mixin footerText($textShadow,$color) {text-shadow:$textShadow;color:$color;}
+@mixin footerCopy($float,$margin) {float:$float; margin:$margin;}
+@mixin footerMenu($list,$float,$margin,$color){list-style-type:$list; float:$float; margin:$margin; color:$color; }
+@mixin footerMenuResponsive($float, $width){float:$float; width:$width;}
+@mixin background($background){background: $background;}
+@mixin backgroundBorder($background,$border){background-color: $background; border:$border;}
+@mixin marginFontsize($margin,$fontSize){margin:$margin;font-size:$fontSize;}
+//nav menu
+@mixin navMenu($fontFamily,$fontSize,$fontStyle,$textAlign,$textDecoration,$textIndent,$border,$position){font-family:$fontFamily;font-size: $fontSize; font-style:$fontStyle; text-align: $textAlign;text-decoration: $textDecoration; text-indent: $textIndent;border: $border; position: $position;}

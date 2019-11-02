@@ -1,0 +1,38 @@
+@import '../../scss/variables.scss';
+@import '../../scss/mixins.scss';
+
+.jumbotron{
+    @include jumbotron($jumbotron...);
+}
+.article {
+    a{
+        color: $colorAD6B04;
+        display: inline-block;
+        @include backgroundBorder($backgroundBorder_a...);
+    }
+    a:hover{
+        @include backgroundBorder($backgroundBorder_a_hover...);
+        text-decoration: none;
+    }
+    .card {
+        @include backgroundBorder($backgroundBorder_card...);
+        @include border-radius(0);
+        .card-img-top{
+            @include padding(1.25rem);
+            @include  border-radius(0);
+            cursor: pointer;
+        }
+        .card-body{
+            .card-title{
+                @include marginFontsize($carrdImageProperties_title...);
+            }
+            .card-text{
+                @include marginFontsize($carrdImageProperties_text...);
+                color:$colorAD6B04;
+                i{
+                    color:$color;
+                }
+            }
+        }
+    }
+}

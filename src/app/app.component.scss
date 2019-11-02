@@ -1,0 +1,83 @@
+@import '../scss/variables';
+@import '../scss/mixins';
+.logo {
+    @include logo($logo...);
+    .first-Text{
+        @include logoFirstText($logoFirstText...);
+    }
+}
+.nav-scroller{
+    @include menuBg($headerMenuBgStyle...);  
+    @include border-top-radius(8px);
+    nav{
+        background-color:$colorWhite;
+        .router-parent-link, button{
+            background: $navMenuBackgroundWebkit;
+            background: $navMenuBackgroundWebMoz; 
+            filter: $navMenuBackgroundFilter;
+            background-color: $colorEdeded;
+            @include navMenu($navMenu...);
+            @include footerText($headerMenuTextProperties...);
+            @include marginPaddingHeaderMenu($headerMenuMarginPadding...);
+            @include box-shadow(inset 0px 1px 0px 0px #ffffff);
+            @include border-bottom-radius(42px);
+            @include border-top-radius(42px);
+        }
+        .router-parent-link:hover{
+            background:$navMenuBackgroundWebkitHover;
+            background:$navMenuBackgroundWebMozHover;
+            filter:$navMenuBackgroundFilterHover;
+            background-color: $colorDfdfdf;
+            color:$color666;
+        }
+        .button:hover, button:active, button:focus{
+            background:$navMenuBackgroundWebkitHover;
+            background:$navMenuBackgroundWebMozHover;
+            filter:$navMenuBackgroundFilterHover;
+            background-color: $colorDfdfdf;
+            color:$color666;
+            @include box-shadow(inset 0px 1px 0px 0px #ffffff);
+        }
+        ul{
+            @include padding(10px);
+            background: $navMenuBackgroundWebkit;
+            background: $navMenuBackgroundWebMoz; 
+            filter: $navMenuBackgroundFilter;
+            background-color: $colorEdeded;
+            @include box-shadow(inset 0px 1px 0px 0px #ffffff);
+            @include width(200px);
+            @include position(42px !important,inherit,inherit,10px !important);
+            .router-child-link{
+                white-space: inherit;
+                @include navMenu($navMenu...);
+                @include footerText($headerMenuTextProperties...);
+                @include borderProp(1px dotted $color666,0,0,0);
+                font-size: $font-19;
+            }
+        }
+    }
+}
+footer{
+    @include logo($logo...);
+    ul{
+        @include marginPadding(0);
+        li{
+            @include footerMenu($footerMenu...);
+            @include footerText($text...);
+            a{
+                @include footerText($text...);
+            }
+        }
+        .item-copyright{
+            float:right;
+        }
+        .item-seperator{
+            @include marginProp(5px,0,5px,0);
+        }
+    }
+    div{
+        @include footerText($text...);
+        @include footerCopy($textCopy...);
+    }
+}
+

@@ -1,0 +1,36 @@
+<div class="jumbotron jumbotron-fluid">
+    <img class="img-fluid" src="https://i.screenshot.net/4jw66u3.jpg" />
+</div>
+<main class="container pb-3" role="main">
+    <div class="row container-bg" style="margin:0 auto;">
+        <div class="col-md-12">
+            <div class="page-head quot">
+                <h2>Product Page</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, placeat corrupti facere
+                    ex provident dignissimos exercitationem necessitatibus dolorum ullam perferendis doloribus.
+                    Quia, explicabo molestias facilis nulla magni impedit unde quasi.
+                </p>
+            </div>
+        </div>
+
+        <app-loading-spinner *ngIf="showSpinner"></app-loading-spinner>
+        <div class="col-md-3 pb-4 article" *ngFor="let productData of productsData">
+            <a (click)=showConfirm(productData)>
+                <div class="card">
+                    <img class="card-img-top img-fluid" [src]="productData.imageUrl[0]" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{productData.categoryId}} / {{productData.productCode}}</h5>
+                        <p class="card-text">İsim :<i> {{productData.productName}} </i> </p>
+                        <p class="card-text">Model : <i> {{productData.productModel}} </i></p>
+                        <p class="card-text">Ağaç : <i> {{productData.wood}} </i></p>
+                        <p class="card-text">Genişlik : <i> {{productData.productWidth}} </i></p>
+                        <p class="card-text">Yükseklik : <i> {{productData.productHeight}} </i></p>
+                        <p class="card-text">Fiyat : <i> {{productData.price}} </i></p>
+                        <p class="card-text">Açıklama : <i> {{productData.description}} </i></p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+</main>

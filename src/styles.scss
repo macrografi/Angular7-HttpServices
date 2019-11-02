@@ -1,1 +1,217 @@
-/* You can add global styles to this file, and also import other style files */
+@import './scss/variables';
+@import './scss/mixins';
+
+//media queries css
+@media #{$extra-large-desktop} {
+    footer{
+        .item-seperator{
+            @include marginProp(5px,10px,5px,10px);
+        }
+    }
+}
+@media #{$large-desktop} {}
+
+@media #{$tablet-landscape} {
+    .test{display: none;}
+    .carousel-caption{
+        @include display(none);
+    }
+    footer {
+        .item-seperator{
+            @include display(none);
+        }
+        li{
+            @include footerMenuResponsive($footerMenuResponsive...);
+            @include marginProp(5px,0,5px,0);
+            @include paddingProp(0,0,5px,0);
+            @include borderProp(0,0,1px dotted #928059,0)
+        }
+        li:last-child{
+            @include border(0);
+        }
+    }
+}
+
+@media #{$tablet-portrait} {
+    #navbarDefault{
+        .router-parent-link{
+            width:100%; display: 
+            block; padding: 0 !important; 
+            margin: 10px 0;
+        }
+        .btn-group{
+            width:100%; 
+            display: block;
+            #button-basic{
+                width:100%; 
+                display: block; 
+                padding: 0 !important; 
+                margin: 10px 0;
+            }
+            #dropdown-basic{
+                padding:0;
+                width:94%;
+                top:30px !important;
+                left:3% !important;
+                right:3% !important;
+            }
+            #dropdown-basic li:first-child  a{
+                border:none;
+            }
+        }
+    }
+    .carousel-caption{
+        @include display(none);
+    }
+    footer {
+        .item-seperator{
+            @include display(none);
+        }
+        li{
+            @include footerMenuResponsive($footerMenuResponsive...);
+            @include marginProp(5px,0,5px,0);
+            @include paddingProp(0,0,5px,0);
+            @include borderProp(0,0,1px dotted #928059,0)
+        }
+        li:last-child{
+            @include border(0);
+        }
+    }
+}
+@media #{$phone} {
+    #navbarDefault{
+        .router-parent-link{
+            width:100%; display: 
+            block; padding: 0 !important; 
+            margin: 10px 0;
+        }
+        .btn-group{
+            width:100%; 
+            display: block;
+            #button-basic{
+                width:100%; 
+                display: block; 
+                padding: 0 !important; 
+                margin: 10px 0;
+            }
+            #dropdown-basic{
+                padding:0;
+                width:94%;
+                top:30px !important;
+                left:3% !important;
+                right:3% !important;
+            }
+            #dropdown-basic li:first-child  a{
+                border:none;
+            }
+        }
+    }
+    .carousel-caption, .carousel-indicators, .carousel-control-next, .carousel-control-prev{
+        @include display(none !important);
+    }
+    footer {
+        .item-seperator{
+            @include display(none);
+        }
+        li{
+            @include footerMenuResponsive($footerMenuResponsive...);
+            @include paddingProp(0,0,5px,0);
+            @include marginProp(5px,0,5px,0);
+            @include borderProp(0,0,1px dotted #928059,0)
+        }
+        li:last-child{
+            @include border(0);
+        }
+    }
+}
+@media #{$min-size}{
+    #navbarDefault{
+        .router-parent-link{
+            width:100%; display: 
+            block; padding: 0 !important; 
+            margin: 10px 0;
+        }
+        .btn-group{
+            width:100%; 
+            display: block;
+            #button-basic{
+                width:100%; 
+                display: block; 
+                padding: 0 !important; 
+                margin: 10px 0;
+            }
+            #dropdown-basic{
+                padding:0;
+                width:94%;
+                top:30px !important;
+                left:3% !important;
+                right:3% !important;
+            }
+            #dropdown-basic li:first-child  a{
+                border:none;
+            }
+        }
+    }
+    .carousel-caption, .carousel-indicators, .carousel-control-next, .carousel-control-prev{
+        @include display(none !important);
+    }
+    footer {
+        .item-seperator{
+            @include display(none);
+        }
+        li{
+            @include footerMenuResponsive($footerMenuResponsive...);
+            @include paddingProp(0,0,5px,0);
+            @include marginProp(5px,0,5px,0);
+            @include borderProp(0,0,1px dotted #928059,0)
+        }
+        li:last-child{
+            @include border(0);
+        }
+    }
+}
+
+
+
+
+
+//globaly
+body{ 
+    color: $body-color;
+    @include background($bodyImg !important);
+    }
+main.container{
+    @include jumbotron($jumbotron...);
+    @include border-bottom-radius(8px);
+}
+main {
+    .container-bg{
+        @include background($containerBg);
+    }
+}
+.page-head{
+    @include paddingProp($pageHeadPaddingProp...);
+    @include background(url("./images/index.png") no-repeat scroll 20px 25px rgba(0, 0, 0, 0));
+    h2{
+        color:$color5C3E07;
+    }
+    p{
+        @include fontWeight(100);
+    }
+}
+
+//carousel
+.carousel-indicators li {
+    @include width-height(10px !important);
+    @include marginProp($carouselIndicatorsMargin...);
+    @include border-radius(50% !important);
+}
+.carousel-caption {
+    @include position($carouselCaptionPosition...);
+    @include padding(10px !important);
+    @include background(rgba($color: #000000, $alpha: 0.5));
+    @include fontStyle(italic);
+}
+.carousel-control-prev, .carousel-control-next {
+    @include width(7% !important);
+}

@@ -1,0 +1,12 @@
+@import '../../scss/variables.scss';
+@import '../../scss/mixins.scss';
+
+main.container{
+    @include jumbotron($jumbotron...);
+    @include border-bottom-radius(8px);
+}
+.jumbotron{
+    @include jumbotron($jumbotron...);
+}
+
+

@@ -1,0 +1,14 @@
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-body">
+      <button type="button" class="close" (click)="close()">&times;</button>
+       <h4 class="modal-title">{{item.productCode}} / {{item.description}}</h4>
+       
+      <carousel>
+        <slide *ngFor="let items of item.imageUrl">
+          <img [src]="items" alt="kafes atölyesi" style="width:100%">
+        </slide>
+      </carousel> 
+    </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+@import '../../scss/variables.scss';
+@import '../../scss/mixins.scss';
+.jumbotron{
+    @include jumbotron($jumbotron...);
+}
+.jumbotron{
+    @include jumbotron($jumbotron...);
+}
